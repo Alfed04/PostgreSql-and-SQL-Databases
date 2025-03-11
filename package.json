@@ -1,0 +1,21 @@
+{
+  "name": "postgresql_and_sql_databases",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npx tsc -b && node ./dist/index2.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@types/express": "^5.0.0",
+    "@types/pg": "^8.11.11",
+    "express": "^4.21.2",
+    "pg": "^8.13.3",
+    "typescript": "^5.8.2"
+  }
+}
