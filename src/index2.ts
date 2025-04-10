@@ -4,6 +4,14 @@ const app = express()
 app.use(express.json())
 
 const client = new Client("postgresql://neondb_owner:npg_QxS8srXej1Cq@ep-shiny-union-a8hscdao-pooler.eastus2.azure.neon.tech/neondb?sslmode=require")
+// const client2 = new Client({
+//     host: 'my.database-server.com',
+//     port: 5334,
+//     database: 'database-name',
+//     user: 'database-user',
+//     password: 'secretpassword!!',
+//     ssl: true
+// })
 
 async function createTables(){
     await client.connect()
@@ -34,7 +42,7 @@ CREATE TABLE addresses (
         await client.end()
     }
 }
-// createTables()
+createTables()
 
 app.post("/post",async (req,res)=>{
     const username = req.body.username
@@ -93,4 +101,4 @@ app.listen(3000,()=>{
 })
 
 
-//By default join performed is inner join , you can either write inner join or join
+// By default join performed is inner join , you can either write inner join or join
